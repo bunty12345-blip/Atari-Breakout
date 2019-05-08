@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7358005006219838150}
   m_Layer: 0
   m_Name: Yellow Block
-  m_TagString: Untagged
+  m_TagString: UnBreakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53cbb14cc92d644a88a4593fa752616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakSound: []
+  breakSound: {fileID: 0}
+  particleExplosion: {fileID: 0}

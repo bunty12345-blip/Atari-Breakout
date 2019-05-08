@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5337204143417246581}
   m_Layer: 0
   m_Name: Block Square
-  m_TagString: Untagged
+  m_TagString: Breakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011687756, y: 0.0058436394}
+  m_Offset: {x: -0.004574418, y: 0.012957096}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -105,7 +105,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.94388103, y: 0.9321928}
+  m_Size: {x: 0.6735728, y: 0.63343143}
   m_EdgeRadius: 0
 --- !u!114 &5337204143417246581
 MonoBehaviour:
@@ -119,4 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f53cbb14cc92d644a88a4593fa752616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakSound: []
+  breakSound: {fileID: 8300000, guid: 779736f8712a5e740b3f7206100738d1, type: 3}
+  particleExplosion: {fileID: 6078289164168448211, guid: 569219a98d88e784189e16bf9f2272d8,
+    type: 3}
+  maxHits: 3
+  hitSprites:
+  - {fileID: 21300000, guid: b999a4334bce3de4d8a7417f7957bed8, type: 3}
+  - {fileID: 21300000, guid: 066f69d65169d774ea6a5e9f5d47334c, type: 3}
+  timesHit: 0
