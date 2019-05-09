@@ -12,6 +12,9 @@ public class Block : MonoBehaviour
 
     // cached  reference
     Level level;
+    GameStatus gameStatus;
+    CameraShake cameraShake;
+
 
     // state variables 
     [SerializeField] int timesHit;  //serialzed only for debug purposes
@@ -20,12 +23,14 @@ public class Block : MonoBehaviour
     private void Start()
     {
         CountBreakableBlocks();
+        gameStatus = FindObjectOfType<GameStatus>();
+        cameraShake = FindObjectOfType<CameraShake>();
     }
 
     private void CountBreakableBlocks()
     {
         level = FindObjectOfType<Level>();
-        if (tag == "Breakable")
+        if (tag == "Breakable" || tag == "Fast" || tag == "Slow")
         {
             level.CountBlocks();
         }
@@ -33,7 +38,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag == "Breakable")
+        if (tag == "Breakable" || tag == "Fast" || tag == "Slow")
         {
             HandleHits();
         }
@@ -47,6 +52,7 @@ public class Block : MonoBehaviour
         if (timesHit >= maxHits)
         {
             DestroyBlock();
+           
         }
         else
         {
@@ -75,7 +81,22 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
         level.BlockDestroyed();
         triggerExplosionEffects();
+        SpeedControls();
+        cameraShake.shakecamera();
 
+
+    }
+
+    private void SpeedControls()
+    {
+        if (tag == "Fast")
+        {
+            gameStatus.GameSpeedFast();
+        }
+        if (tag == "Slow")
+        {
+            gameStatus.GameSpeedSlow();
+        }
     }
 
     private void PlayBlockDestroyeSFX()

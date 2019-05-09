@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Breakable
   - UnBreakable
+  - Fast
+  - Slow
   layers:
   - Default
   - TransparentFX
