@@ -40,9 +40,9 @@ public class GameStatus : MonoBehaviour
         Time.timeScale = gameSpeed;
     }
 
-    public void AddToScore()
+    public void AddToScore(int bonus)
     {
-        currentScore += scorePerBlock;
+        currentScore = currentScore + scorePerBlock + bonus;  //added bonus points for bonus +250 brick 
         scoreText.text = currentScore.ToString();
     }
 

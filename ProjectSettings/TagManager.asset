@@ -8,6 +8,8 @@ TagManager:
   - UnBreakable
   - Fast
   - Slow
+  - +250
+  - x10
   layers:
   - Default
   - TransparentFX

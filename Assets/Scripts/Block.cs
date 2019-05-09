@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -8,6 +6,7 @@ public class Block : MonoBehaviour
     // config parameters
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject particleExplosion;
+    [SerializeField] GameObject extraBall;
     [SerializeField] Sprite[] hitSprites;
 
     // cached  reference
@@ -30,7 +29,7 @@ public class Block : MonoBehaviour
     private void CountBreakableBlocks()
     {
         level = FindObjectOfType<Level>();
-        if (tag == "Breakable" || tag == "Fast" || tag == "Slow")
+        if (tag == "Breakable" || tag == "Fast" || tag == "Slow" || tag == "+250" || tag == "x10")
         {
             level.CountBlocks();
         }
@@ -38,7 +37,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag == "Breakable" || tag == "Fast" || tag == "Slow")
+        if (tag == "Breakable" || tag == "Fast" || tag == "Slow" || tag == "+250" || tag == "x10")
         {
             HandleHits();
         }
@@ -97,11 +96,20 @@ public class Block : MonoBehaviour
         {
             gameStatus.GameSpeedSlow();
         }
+        if(tag == "+250")
+        {
+            FindObjectOfType<GameStatus>().AddToScore(170); //80 is automatically added as it is called twice 
+        }
+        if(tag == "x10")
+        {
+            GameObject ExtraBall = Instantiate(extraBall, transform.position, transform.rotation);
+            Destroy(ExtraBall, 10);
+        }
     }
 
     private void PlayBlockDestroyeSFX()
     {
-        FindObjectOfType<GameStatus>().AddToScore();
+        FindObjectOfType<GameStatus>().AddToScore(0); 
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position, 0.7f);
     }
 
