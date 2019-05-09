@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSpeed: 1
+  scorePerBlock: 40
+  scoreText: {fileID: 0}
+  isAutoplayEnabled: 1
+  currentScore: 0
