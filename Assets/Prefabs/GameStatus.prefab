@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcf08bd957bef344ebe6b4a400c0223a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 1
+  gameSpeed: 0.8
   scorePerBlock: 40
   scoreText: {fileID: 0}
   isAutoplayEnabled: 1
