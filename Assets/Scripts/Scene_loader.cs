@@ -17,6 +17,37 @@ public class Scene_loader : MonoBehaviour
         SceneManager.LoadScene(0);
         FindObjectOfType<GameStatus>().ResetGame();
     }
+
+    public void loadLevel1()
+    {
+
+        SceneManager.LoadScene(1);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel2()
+    {
+
+        SceneManager.LoadScene(2);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel3()
+    {
+
+        SceneManager.LoadScene(3);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel4()
+    {
+
+        SceneManager.LoadScene(4);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel5()
+    {
+
+        SceneManager.LoadScene(5);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
     public void QuitGame()
     {
         Application.Quit();
