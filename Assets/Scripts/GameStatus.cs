@@ -61,9 +61,9 @@ public class GameStatus : MonoBehaviour
 
     IEnumerator EnableSpeedGame()    // Coroutine for updating gamespeed when it hits fast block
     {
-        gameSpeed = 1.5f;
-        yield return new WaitForSeconds(8.0f);
-        gameSpeed = 0.8f;
+        gameSpeed = 1.2f;
+        yield return new WaitForSeconds(5.0f);
+        gameSpeed = 0.7f;
     }
 
     public void GameSpeedSlow()  // for updating gamespeed when it hits Slow block
@@ -75,6 +75,6 @@ public class GameStatus : MonoBehaviour
     {
         gameSpeed = 0.4f;
         yield return new WaitForSeconds(5.0f);
-        gameSpeed = 0.8f;
+        gameSpeed = 0.7f;
     }
 }

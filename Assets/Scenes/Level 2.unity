@@ -1197,12 +1197,12 @@ PrefabInstance:
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.65
+      value: 1.84
       objectReference: {fileID: 0}
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.33
+      value: 8.46
       objectReference: {fileID: 0}
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
@@ -5815,12 +5815,12 @@ PrefabInstance:
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.83
+      value: 7.68
       objectReference: {fileID: 0}
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.49
+      value: 6.62
       objectReference: {fileID: 0}
     - target: {fileID: 6981606081571863534, guid: 6f1667f80215b03429ac8863b5fcaca3,
         type: 3}
@@ -6606,6 +6606,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isAutoplayEnabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424461942913336105, guid: 455c894cf0ccd764cb781c336b9f3c6c,
+        type: 3}
+      propertyPath: gameSpeed
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 455c894cf0ccd764cb781c336b9f3c6c, type: 3}
