@@ -13,6 +13,7 @@ public class Block : MonoBehaviour
     Level level;
     GameStatus gameStatus;
     CameraShake cameraShake;
+    MusicPlayer musicPlayer;
 
 
     // state variables 
@@ -24,6 +25,7 @@ public class Block : MonoBehaviour
         CountBreakableBlocks();
         gameStatus = FindObjectOfType<GameStatus>();
         cameraShake = FindObjectOfType<CameraShake>();
+        musicPlayer = FindObjectOfType<MusicPlayer>();
     }
 
     private void CountBreakableBlocks()
@@ -91,10 +93,13 @@ public class Block : MonoBehaviour
         if (tag == "Fast")
         {
             gameStatus.GameSpeedFast();
+            musicPlayer.pitchIncrease();
+            
         }
         if (tag == "Slow")
         {
             gameStatus.GameSpeedSlow();
+            musicPlayer.pitchDecrease();
         }
         if(tag == "+250")
         {
@@ -103,7 +108,7 @@ public class Block : MonoBehaviour
         if(tag == "x10")
         {
             GameObject ExtraBall = Instantiate(extraBall, transform.position, transform.rotation);
-            Destroy(ExtraBall, 10);
+            Destroy(ExtraBall,5);
         }
     }
 

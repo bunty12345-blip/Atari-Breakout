@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5167022947116940846}
   - component: {fileID: 5167022947116940845}
   - component: {fileID: 5167022947116940844}
-  - component: {fileID: 5167022947116940818}
   - component: {fileID: 402335278}
+  - component: {fileID: 6041641088054704405}
   m_Layer: 0
-  m_Name: ball 1
+  m_Name: Extra Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,31 +117,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.020061582}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2743295
---- !u!114 &5167022947116940818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167022947116940841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b04eadf7cbf72b4bbdbb96f9d97e545, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paddle1: {fileID: 0}
-  xPush: 2
-  yPush: 15
-  ballSounds:
-  - {fileID: 8300000, guid: 22db21d07440eea4bb53eb0f70881817, type: 3}
-  - {fileID: 8300000, guid: 9459f317881994846b6511afdba3cb91, type: 3}
-  - {fileID: 8300000, guid: 6f639ae51cfd1ce4fbbdedfe61cc1461, type: 3}
-  - {fileID: 8300000, guid: c2a8ea9760c58774eaf299aa8772ecab, type: 3}
-  - {fileID: 8300000, guid: c2d80e76bd39707438e85cc441caf68e, type: 3}
-  randomFactor: 0.3
+  m_Radius: 0.26
 --- !u!82 &402335278
 AudioSource:
   m_ObjectHideFlags: 0
@@ -238,3 +216,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6041641088054704405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5167022947116940841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83c991a2ea26dc49b3f95cd755e4095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xPush: 2
+  yPush: 15
+  ballSounds:
+  - {fileID: 8300000, guid: 22db21d07440eea4bb53eb0f70881817, type: 3}
+  - {fileID: 8300000, guid: 9459f317881994846b6511afdba3cb91, type: 3}
+  - {fileID: 8300000, guid: 6f639ae51cfd1ce4fbbdedfe61cc1461, type: 3}
+  - {fileID: 8300000, guid: c2a8ea9760c58774eaf299aa8772ecab, type: 3}
+  - {fileID: 8300000, guid: c2d80e76bd39707438e85cc441caf68e, type: 3}
+  randomFactor: 0.2
