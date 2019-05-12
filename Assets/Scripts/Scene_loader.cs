@@ -17,7 +17,12 @@ public class Scene_loader : MonoBehaviour
         SceneManager.LoadScene(0);
         FindObjectOfType<GameStatus>().ResetGame();
     }
+    public void loadLevelsScene()
+    {
 
+        SceneManager.LoadScene(10);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
     public void loadLevel1()
     {
 
@@ -46,6 +51,24 @@ public class Scene_loader : MonoBehaviour
     {
 
         SceneManager.LoadScene(5);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel6()
+    {
+
+        SceneManager.LoadScene(6);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel7()
+    {
+
+        SceneManager.LoadScene(7);
+        FindObjectOfType<GameStatus>().ResetGame();
+    }
+    public void loadLevel8()
+    {
+
+        SceneManager.LoadScene(8);
         FindObjectOfType<GameStatus>().ResetGame();
     }
     public void QuitGame()
